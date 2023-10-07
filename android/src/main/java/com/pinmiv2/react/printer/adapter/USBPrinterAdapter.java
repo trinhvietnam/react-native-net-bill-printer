@@ -1,7 +1,7 @@
-package com.pinmi.react.printer.adapter;
+package com.pinmiv2.react.printer.adapter;
 
-import static com.pinmi.react.printer.adapter.UtilsImage.getPixelsSlow;
-import static com.pinmi.react.printer.adapter.UtilsImage.recollectSlice;
+import static com.pinmiv2.react.printer.adapter.UtilsImage.getPixelsSlow;
+import static com.pinmiv2.react.printer.adapter.UtilsImage.recollectSlice;
 
 import android.annotation.SuppressLint;
 import android.app.PendingIntent;

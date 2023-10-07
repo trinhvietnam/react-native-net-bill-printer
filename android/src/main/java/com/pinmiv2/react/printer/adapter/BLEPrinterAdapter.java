@@ -1,6 +1,6 @@
-package com.pinmi.react.printer.adapter;
-import static com.pinmi.react.printer.adapter.UtilsImage.getPixelsSlow;
-import static com.pinmi.react.printer.adapter.UtilsImage.recollectSlice;
+package com.pinmiv2.react.printer.adapter;
+import static com.pinmiv2.react.printer.adapter.UtilsImage.getPixelsSlow;
+import static com.pinmiv2.react.printer.adapter.UtilsImage.recollectSlice;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;

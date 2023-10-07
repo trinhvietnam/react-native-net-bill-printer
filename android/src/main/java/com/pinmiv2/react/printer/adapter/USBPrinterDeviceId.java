@@ -1,4 +1,4 @@
-package com.pinmi.react.printer.adapter;
+package com.pinmiv2.react.printer.adapter;
 
 /**
  * Created by xiesubin on 2017/9/21.

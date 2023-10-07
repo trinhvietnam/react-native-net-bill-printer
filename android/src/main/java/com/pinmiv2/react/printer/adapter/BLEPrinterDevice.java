@@ -1,4 +1,4 @@
-package com.pinmi.react.printer.adapter;
+package com.pinmiv2.react.printer.adapter;
 
 import android.bluetooth.BluetoothDevice;
 

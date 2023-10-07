@@ -1,4 +1,4 @@
-package com.pinmi.react.printer;
+package com.pinmiv2.react.printer;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,10 +10,10 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableArray;
-import com.pinmi.react.printer.adapter.PrinterAdapter;
-import com.pinmi.react.printer.adapter.PrinterDevice;
-import com.pinmi.react.printer.adapter.USBPrinterAdapter;
-import com.pinmi.react.printer.adapter.USBPrinterDeviceId;
+import com.pinmiv2.react.printer.adapter.PrinterAdapter;
+import com.pinmiv2.react.printer.adapter.PrinterDevice;
+import com.pinmiv2.react.printer.adapter.USBPrinterAdapter;
+import com.pinmiv2.react.printer.adapter.USBPrinterDeviceId;
 
 import java.util.List;
 
