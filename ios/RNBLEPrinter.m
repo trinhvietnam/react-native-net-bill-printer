@@ -3,7 +3,7 @@
 #import "RNBLEPrinter.h"
 #import "PrinterSDK.h"
 
-@implementation RNBLEPrinter
+@implementation RNBLEPrinterBill
 
 - (dispatch_queue_t)methodQueue
 {

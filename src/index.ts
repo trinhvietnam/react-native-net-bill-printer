@@ -5,10 +5,10 @@ import { processColumnText } from "./utils/print-column";
 import { COMMANDS } from "./utils/printer-commands";
 import { connectToHost } from "./utils/net-connect";
 
-const RNUSBPrinter = NativeModules.RNUSBPrinter;
-const RNBLEPrinter = NativeModules.RNBLEPrinter;
-const RNNetPrinter = NativeModules.RNNetPrinter;
-
+const RNUSBPrinter = NativeModules.RNUSBPrinterBill;
+const RNBLEPrinter = NativeModules.RNBLEPrinterBill;
+const RNNetPrinter = NativeModules.RNNetPrinterBill;
+import { Buffer } from 'buffer';
 export interface PrinterOptions {
   beep?: boolean;
   cut?: boolean;
@@ -106,12 +106,8 @@ const textPreprocessingIOS = (text: string, canCut = true, beep = true) => {
   };
 };
 
-// const imageToBuffer = async (imagePath: string, threshold: number = 60) => {
-//   const buffer = await EPToolkit.exchange_image(imagePath, threshold);
-//   return buffer.toString("base64");
-// };
 
-const USBPrinter = {
+const USBPrinterBill = {
   init: (): Promise<void> =>
     new Promise((resolve, reject) =>
       RNUSBPrinter.init(
@@ -225,7 +221,7 @@ const USBPrinter = {
   },
 };
 
-const BLEPrinter = {
+const BLEPrinterBill = {
   init: (): Promise<void> =>
     new Promise((resolve, reject) =>
       RNBLEPrinter.init(
@@ -380,7 +376,7 @@ const BLEPrinter = {
   },
 };
 
-const NetPrinter = {
+const NetPrinterBill = {
   init: (): Promise<void> =>
     new Promise((resolve, reject) =>
       RNNetPrinter.init(
@@ -495,11 +491,12 @@ const NetPrinter = {
   },
 
   /**
-   * Android print with encoder
+   * print with encoder
    * @param text
    */
   printRaw: (text: string): void => {
     if (Platform.OS === "ios") {
+      RNNetPrinter.printRawData(Buffer.from(text, "base64").toString("hex"),{cut:false,beep:false},(error)=>console.warn(error));
     } else {
       RNNetPrinter.printRawData(text, (error: Error) => console.warn(error));
     }
@@ -538,12 +535,12 @@ const NetPrinter = {
   },
 };
 
-const NetPrinterEventEmitter =
+const NetPrinterBillEventEmitter =
   Platform.OS === "ios"
     ? new NativeEventEmitter(RNNetPrinter)
     : new NativeEventEmitter();
 
-export { COMMANDS, NetPrinter, BLEPrinter, USBPrinter, NetPrinterEventEmitter };
+export { COMMANDS, NetPrinterBill, BLEPrinterBill, USBPrinterBill, NetPrinterBillEventEmitter };
 
 export enum RN_THERMAL_RECEIPT_PRINTER_EVENTS {
   EVENT_NET_PRINTER_SCANNED_SUCCESS = "scannerResolved",

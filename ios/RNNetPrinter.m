@@ -56,7 +56,7 @@ NSString *const EVENT_SCANNER_RUNNING = @"scannerRunning";
 
 @end
 
-@implementation RNNetPrinter
+@implementation RNNetPrinterBill
 
 - (dispatch_queue_t)methodQueue
 {

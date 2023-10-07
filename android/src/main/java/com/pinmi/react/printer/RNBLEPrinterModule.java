@@ -92,6 +92,6 @@ public class RNBLEPrinterModule extends ReactContextBaseJavaModule implements RN
 
     @Override
     public String getName() {
-        return "RNBLEPrinter";
+        return "RNBLEPrinterBill";
     }
 }

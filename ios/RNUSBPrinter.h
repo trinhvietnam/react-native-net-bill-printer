@@ -7,7 +7,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNUSBPrinter : NSObject <RCTBridgeModule>
+@interface RNUSBPrinterBill : NSObject <RCTBridgeModule>
 
 @end
 

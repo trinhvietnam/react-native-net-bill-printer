@@ -16,7 +16,7 @@
 #endif
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface RNBLEPrinter : NSObject <RCTBridgeModule>{
+@interface RNBLEPrinterBill : NSObject <RCTBridgeModule>{
     NSMutableArray* _printerArray;
     NSObject* m_printer;
 }
